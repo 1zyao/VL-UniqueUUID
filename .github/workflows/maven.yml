@@ -27,8 +27,8 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: ls
-        run: ls && cat settings.xml && cd target && ls
+      - name: mv
+        run: mv target/UniqueUUID-1.3.jar ./
 
       - name: Checkout
         uses: actions/checkout@v3
