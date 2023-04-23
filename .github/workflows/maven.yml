@@ -29,9 +29,6 @@ jobs:
 
       - name: mv
         run: mv target/UniqueUUID-1.3.jar ./
-
-      - name: Checkout
-        uses: actions/checkout@v3
         
       - name: Build
         run: echo ${{ github.sha }} > Release.txt
