@@ -56,8 +56,7 @@ public class UniqueUUID extends JavaPlugin {
             String storageName = uuid2name.get(sourceUUID);
             final String kickMsg = "Another account with the same username has already been registered to this server.\n" +
                     "Please try another username.\n \n" +
-                    "ユーザー名が既に登録されておりますので、他のユーザー名でもう一度お願い致します。\n \n" +
-                    "该用户已经用\"正版\"或者\"统一通行证\"注册，请采取正确方式登录或使用新的ID。";
+                    "该用户已经用\"正版\"或者\"皮肤站\"注册，请采取正确方式登录或使用新的ID。";
             if (sourceName.equals(storageName)) {
                 // UUID match and Name Match.
                 return; // allowed
