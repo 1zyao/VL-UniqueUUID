@@ -28,7 +28,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: ls
-        run: ls
+        run: ls && cat settings.xml && cd target && ls
 
       - name: Checkout
         uses: actions/checkout@v3
