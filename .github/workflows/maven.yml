@@ -27,10 +27,18 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v3
+        
       - name: Build
         run: echo ${{ github.sha }} > Release.txt
+        
       - name: Test
         run: cat Release.txt
+        
+      - name: Generate release tag
+        id: tag
+        run: |
+          echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M")"
+        
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
